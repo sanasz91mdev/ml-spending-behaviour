@@ -86,7 +86,7 @@ def predict():
     pred = model.predict(data)
     print(pred)
     # Return prediction as JSON
-    return jsonify({'prediction': list(str(pred))})
+    return jsonify({'prediction': (str(pred[0]))})
 
 # Start Flask app
 if __name__ == '__main__':
