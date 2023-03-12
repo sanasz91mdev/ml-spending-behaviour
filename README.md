@@ -122,7 +122,7 @@ proportion of correct predictions out of all the predictions made by the model o
 
 `Accuracy = (TP+TN)/(TP+TN+FP+FN)`
 
-###F1-score: 
+### F1-score: 
 
 It is the harmonic mean of precision and recall. It balances both the metrics and gives an overall measure of the model's performance.
 
@@ -130,7 +130,7 @@ It is the harmonic mean of precision and recall. It balances both the metrics an
 
 
 
-###Support: 
+### Support: 
 
 It is the number of actual occurrences of the class in the dataset.
 
