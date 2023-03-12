@@ -55,14 +55,14 @@ Refers to the number of possible values that a categorical feature can assume:
 | max_depth| none|
 
 
-##Model Accuracy
+## Model Accuracy
 
 
 | Metric | Value |
 |--|--|
 |  Model Accuracy| 0.93 |
 
-##Feature Importance
+## Feature Importance
 
 |Feature  | Importance |
 |--|--|
