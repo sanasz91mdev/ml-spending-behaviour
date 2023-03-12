@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 from flask import Flask, jsonify, request
 import joblib
 
@@ -39,6 +39,12 @@ y_pred = model.predict(X_test)
 # Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy: {:.2f}'.format(accuracy))
+
+
+# Generate classification report
+report = classification_report(y_test, y_pred)
+print('Classification Report:')
+print(report)
 
 
 # Save the trained model and LabelEncoders
@@ -85,8 +91,29 @@ def predict():
     # Make prediction using trained model
     pred = model.predict(data)
     print(pred)
-    # Return prediction as JSON
-    return jsonify({'prediction': (str(pred[0]))})
+
+     # Make prediction using trained model
+    proba = model.predict_proba(data)[0]
+    pred_class = model.predict(data)[0]
+    print(f'Prediction: {pred_class}')
+    # Create dictionary to store class probabilities
+    for i, p in enumerate(proba):
+        print(f'Probability of class {model.classes_[i]}: {p:.4f}')
+
+    # Create dictionary to store class probabilities
+    prob_dict = {}
+    for i, label in enumerate(model.classes_):
+        prob_dict[label] = proba[i]
+
+
+    # Sort probabilities in descending order and return top 3 predictions
+    top3 = sorted(prob_dict.items(), key=lambda x: x[1], reverse=True)[:3]
+
+    # Return top 3 predictions as JSON
+    return jsonify({'predictions': [{'class': str(label), 'probability': str(prob)} for label, prob in top3]})
+
+    # # Return prediction as JSON
+    # return jsonify({'prediction': (str(pred[0]))})
 
 # Start Flask app
 if __name__ == '__main__':
