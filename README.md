@@ -15,7 +15,7 @@
 | Target Variable| Target-MCC1|
 | Target Variable Type| Categorical|
 | Number of classes in Target| 10|
-| Values of classes in Target| 4111, 4814, 5411, 5621, 5691, 5812, 5983,7032, 7832 |
+| Values of classes in Target| 4111, 4814, 5411, 5621, 5691, 5812, 5983,7032, 5999, 7832 |
 
 
 
@@ -43,8 +43,9 @@ Refers to the number of possible values that a categorical feature can assume:
 
 ## ML Algorithm
 
-|  Algorithm Parameters| Value|
+|  Algorithm | Value|
 |--|--|
+| Problem Type | Multiclass Classification|
 | Name| Random Forest| 
 
 |Hyperparameter| Values|
@@ -133,7 +134,7 @@ It is the harmonic mean of precision and recall. It balances both the metrics an
 
 It is the number of actual occurrences of the class in the dataset.
 
-The report includes these metrics for each class in the target variable. In this case, there are nine classes represented by the numbers 4111, 4814, 5411, 5621, 5691, 5812, 5983, 7032, and 7832.
+The report includes these metrics for each class in the target variable. In this case, there are ten classes represented by the numbers 4111, 4814, 5411, 5621, 5691, 5812, 5983, 7032, 5999, 7832.
 
 - The macro average and weighted average of precision, recall, and F1-score are also provided. 
 - Macro average is the unweighted average of each metric across all the classes.
