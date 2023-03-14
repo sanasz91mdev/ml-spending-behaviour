@@ -19,7 +19,7 @@
 
 ## MCCs Lookup - Definition
 
-| Merchant categor code | Description                               |
+| Merchant category code | Description                               |
 | --------------------- | ----------------------------------------- |
 | 7832                  | Motion Picture Theaters                   |
 | 5411                  | Grocery Stores                            |
