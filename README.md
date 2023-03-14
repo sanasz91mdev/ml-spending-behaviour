@@ -17,6 +17,21 @@
 | Number of classes in Target| 10|
 | Values of classes in Target| 4111, 4814, 5411, 5621, 5691, 5812, 5983,7032, 5999, 7832 |
 
+## MCCs Lookup - Definition
+
+| Merchant categor code | Description                               |
+| --------------------- | ----------------------------------------- |
+| 7832                  | Motion Picture Theaters                   |
+| 5411                  | Grocery Stores                            |
+| 5812                  | Eating places and Restaurant              |
+| 7032                  | Sporting and Recreational Camps           |
+| 5999                  | Miscellaneous and Specialty Retail Stores |
+| 4111                  | Transportation                            |
+| 5691                  | Men’s and Women’s Clothing Stores         |
+| 5983                  | Fuel Oil, Liquefied Petroleum             |
+| 4814                  | Telecommunication services                |
+| 5621                  | Women’s Ready-to-Wear Stores              |
+
 
 
 ## Sample Top 5 Rows
